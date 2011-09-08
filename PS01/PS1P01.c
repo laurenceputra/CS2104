@@ -15,6 +15,7 @@ int main(){
 	//initialisation
 	int i;	//counter for for loop
 	srand(time(NULL));
+	//input string
 	char *str = "123456789";
 	//to force the first address location to be small enough in case rand()%10000 returns 9999
 	int curr = rand() % 2000;

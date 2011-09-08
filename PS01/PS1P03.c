@@ -17,6 +17,7 @@ void exec();
 int main(){
 	//initialisation
 	int i, next;	//counter for for loop, and next counter
+	//values to be put into linkedlist.
 	int a[] = {12, 63, 29, 74, 43, 54};
 	int finish = 0;
 	for(i = 0; i < 10000; i++){
