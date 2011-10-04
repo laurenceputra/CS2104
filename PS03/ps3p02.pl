@@ -2,6 +2,18 @@
 % Matric: U096833E
 % Email: laurenceputra@gmail.com
 
+ma(Exp) :-
+	Exp =.. [;, First, Remain],
+	First =.. [=, Var, Exp1],
+	montage(Exp1, Var),
+	ma(Remain),
+	!.
+
+ma(Exp) :-
+	Exp =.. [=, Var, Exp1],
+	montage(Exp1, Var),
+	!.
+
 %base case
 montage(Exp, Output) :-
 	scale(Exp, 100, 100, Output),
@@ -80,4 +92,3 @@ scale(Arg, Width, Height, Output) :-
 	write(Output),
 	writeln('.jpg'),
 	!.
-
